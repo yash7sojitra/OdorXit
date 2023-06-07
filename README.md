@@ -18,7 +18,6 @@ Follow the steps below to set up and run the Tailwind Vite project:
 
 3. Install project dependencies using npm:
    npm install OR npm i
-    
 4.Run using the command:
    npm start
 
