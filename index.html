@@ -7,14 +7,20 @@
     <title>OdorXit</title>
     <link rel="stylesheet" href="input.css" />
   </head>
-  <body class="">
-    <div class="h-screen bg-section1-bg bg-cover bg-no-repeat">
-      <div class="bg-section1-bg-dark h-screen text-white">
+  <body class="m-0 p-0">
+    <div
+      class="h-screen l bg-section1-bg bg-cover bg-no-repeat laptop:h-[max-content] tablet:h-[max-content] mobile:h-[max-content]"
+    >
+      <div class="bg-section1-bg-dark h-full text-white t">
         <nav
-          class="h-[15vh] py-2 container mx-auto px-5 flex justify-around items-center font-medium"
+          class="h-[15vh] py-2 container flex justify-between items-center font-medium"
         >
-          <img src="assets/logo-home.png" alt="OdorXit" class="h-full" />
-          <ul class="flex items-center space-x-5 translate-x-12">
+          <img
+            src="assets/logo-home.png"
+            alt="OdorXit"
+            class="h-full laptop:h-1/2 mobile:h-[80%]"
+          />
+          <ul class="flex items-center space-x-5 l-tablet:hidden">
             <li class="hover:text-[#1AA84F] cursor-pointer"><a>HOME</a></li>
             <div class="w-2 h-2 bg-[#1AA84F] rounded-[50%]"></div>
             <li class="hover:text-[#1AA84F] cursor-pointer">
@@ -34,31 +40,73 @@
             </li>
           </ul>
           <div>
-            <ul class="flex items-center space-x-4">
+            <ul class="flex items-center space-x-4 mobile:space-x-2">
               <li>
-                <img src="assets/search.svg" alt="search" />
+                <img
+                  src="assets/search.svg"
+                  alt="search"
+                  class="mobile:h-5 mobile:w-5"
+                />
               </li>
-              <li
-                class="bg-black bg-opacity-40 h-10 w-10 flex justify-center items-center rounded-[50%]"
-              >
-                <img src="assets/menu.png" alt="menu" />
+              <li class="hidden l-tablet:flex">
+                <input type="checkbox" id="menu-toggle" class="hidden" />
+                <label
+                  for="menu-toggle"
+                  class="bg-black bg-opacity-40 h-10 w-10 l-tablet:flex justify-center items-center rounded-full mobile:h-7 mobile:w-7"
+                >
+                  <img src="assets/menu.png" alt="menu" class="scale-75" />
+                </label>
               </li>
             </ul>
           </div>
         </nav>
+
         <div class="h-[1px] bg-transparent border-[1px] opacity-30"></div>
+        <!-- hamburger-menu -->
+        <ul
+          id="ham-menu"
+          class="hidden l-tablet:flex my-1 items-center justify-center space-x-4 mobile:flex-col mobile:space-x-0"
+        >
+          <li class="hover:text-[#1AA84F] cursor-pointer">
+            <a>HOME</a>
+          </li>
+          <div class="w-2 h-2 bg-[#1AA84F] rounded-[50%] mobile:hidden"></div>
+          <li class="hover:text-[#1AA84F] cursor-pointer">
+            <a>PRODUCTS</a>
+          </li>
+          <div class="w-2 h-2 bg-[#1AA84F] rounded-[50%] mobile:hidden"></div>
+          <li class="hover:text-[#1AA84F] cursor-pointer">
+            <a>HOW TO USE</a>
+          </li>
+          <div class="w-2 h-2 bg-[#1AA84F] rounded-[50%] mobile:hidden"></div>
+          <li class="hover:text-[#1AA84F] cursor-pointer">
+            <a>LEARN MORE</a>
+          </li>
+          <div class="w-2 h-2 bg-[#1AA84F] rounded-[50%] mobile:hidden"></div>
+          <li class="hover:text-[#1AA84F] cursor-pointer">
+            <a>BUY NOW</a>
+          </li>
+        </ul>
+        <div class="h-[1px] bg-transparent border-[1px] opacity-30"></div>
+
         <main
-          class="container mx-auto h-[85vh] flex flex-1 flex-col justify-center items-center"
+          class="container h-[85vh] tablet:h-full flex flex-1 flex-col justify-center items-center laptop:justify-center laptop:py-20 tablet:justify-start tablet:mt-20 mobile:mt-10 laptop:h-[max-content] mobile:h-[max-content]"
         >
           <div class="flex flex-col justify-center items-center">
             <h3 class="font-bold my-3">Don't Just Cover Up Odors</h3>
-            <h1 class="font-bold text-5xl">ELIMINATE THEM FOR GOOD!</h1>
-            <div class="my-12 flex flex-col items-center space-y-3">
+            <h1
+              class="font-bold text-5xl laptop:text-4xl mobile:text-center mobile:text-2xl"
+            >
+              ELIMINATE THEM FOR GOOD!
+            </h1>
+            <div
+              class="my-12 flex flex-col items-center space-y-3 l-tablet:space-y-2 mobile:my-9"
+            >
               <p class="text-sm font-light">
                 Search To Solve Your Odor Problems!
               </p>
               <div
-                class="flex bg-white justify-between items-center space-x-2 rounded-md px-5 py-2 w-[600px]"
+                class="flex bg-white justify-between items-center space-x-2 rounded-md px-5 py-2 w-[600px] mobile:w-[300px]"
               >
                 <input
                   type="text"
@@ -70,16 +118,20 @@
                 <img src="assets/search-bar.svg" alt="search" class="h-3/4" />
               </div>
             </div>
-            <h2 class="font-extrabold text-2xl">
+            <h2
+              class="font-extrabold text-2xl laptop:font-bold l-tablet:text-xl mobile:text-center"
+            >
               ODORXIT WORKS ON THE NASTIEST ODORS!
             </h2>
-            <p class="my-3 font-bold text-sm">
+            <p class="my-3 font-bold text-sm mobile:text-center">
               Pets, Humans, Skunks, Mold, Mildew, Smoke & Much More!
             </p>
-            <div class="my-5">
-              <ul class="flex space-x-5 items-center justify-center">
+            <div class="my-5 laptop:my-16 tablet:my-10 mobile:w-[300px]">
+              <ul
+                class="flex tablet:flex-wrap space-x-5 items-center justify-center mobile:space-x-0 mobile:space-y-5"
+              >
                 <li
-                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#1AA84F]"
+                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#1AA84F] mobile:w-full"
                 >
                   <img
                     src="assets/noun-checkout-completed.svg"
@@ -99,7 +151,7 @@
                   </span>
                 </li>
                 <li
-                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#114A90]"
+                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#114A90] mobile:w-full"
                 >
                   <img
                     src="assets/noun-shop.svg"
@@ -119,7 +171,7 @@
                   </span>
                 </li>
                 <li
-                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#FF9900]"
+                  class="grid grid-cols-[auto_auto] p-4 rounded-md grid-rows-2 bg-[#FF9900] tablet:mt-5 mobile:w-full"
                 >
                   <img
                     src="assets/amazon.svg"
@@ -144,194 +196,199 @@
         </main>
       </div>
     </div>
-    <section>
+
+    <section
+      class="container my-10 flex justify-center items-center h-[530px] l-tablet:my-0 l-tablet:h-max"
+    >
       <div
-        class="container mx-auto px-5 my-10 flex justify-center items-center"
+        class="flex items-center justify-center my-20 relative desktop:scale-90 laptop:scale-75 l-tablet:flex-col l-tablet:my-5 mobile:scale-[0.6]"
       >
-        <ul class="flex items-center justify-center space-x-40\ my-20 relative">
-          <img
-            src="assets/product-image.png"
-            alt="product-image"
-            class="w-[300px] h-[300px] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full"
-          />
+        <img
+          src="assets/product-image.png"
+          alt="product-image"
+          class="w-[300px] h-[300px] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] rounded-full"
+        />
+        <span
+          class="flex flex-col h-[500px] w-[500px] mr-32 l-tablet:mr-0 l-tablet:mb-32 rounded-full pr-20 justify-center items-center border-2 border-[#1AA84F]"
+        >
+          <div class="flex flex-col w-[90%] items-end">
+            <p class="text-[#1AA84F] font-bold text-right max-w-[90%]">
+              A REAL SOLUTION.
+            </p>
+            <h2 class="font-bold text-3xl text-right max-w-[90%]">
+              Have you Odors Solved Within 24 Hours
+            </h2>
+            <p class="text-right my-3 max-w-[90%] text-[#505854]">
+              Don't just cover up your odors, eliminate them! OdorXit provides a
+              real solution to your odor problems without using perfumes,
+              olfactory desensitizers, or masking scents.
+            </p>
+            <span class="flex items-center space-x-5 my-5 max-w-[90%]">
+              <button
+                class="text-[#1AA84F] items-center flex px-3 py-2 rounded space-x-3 font-semibold"
+              >
+                <img src="assets/store.svg" alt="store" class="pr-3" />
+                Find Store
+              </button>
+              <button
+                class="bg-[#1AA84F] flex items-center px-3 py-2 rounded text-white space-x-3 font-semibold"
+              >
+                <img src="assets/cart.svg" alt="cart" class="pr-3" /> Buy Online
+              </button>
+            </span>
+          </div>
+        </span>
+
+        <span
+          class="flex flex-col h-[500px] w-[500px] rounded-full pl-20 justify-center items-center border-2 border-[#1AA84F]"
+        >
+          <div class="flex flex-col w-[90%] items-start">
+            <p class="text-[#114A90] font-bold text-left max-w-[90%]">
+              A REAL SOLUTION.
+            </p>
+            <h2 class="font-bold text-3xl text-left max-w-[90%]">
+              Safe. Green. Natural.
+            </h2>
+            <p class="text- my-3 max-w-[90%] text-[#505854]">
+              OdorXit is an all natural, non-toxic odor eliminator. It is safe
+              to use on and around pets and children. OdorXit is harmless and
+              can safely be sprayed onto skin and pet fur.
+            </p>
+            <span class="flex items-center space-x-5 my-5 max-w-[90%]">
+              <button
+                class="text-[#114A90] flex items-center px-3 py-2 rounded space-x-3 font-semibold"
+              >
+                <img
+                  src="assets/arrow-up-right-circle.svg"
+                  alt="store"
+                  class="pr-3"
+                />
+                Learn More
+              </button>
+              <button
+                class="bg-[#114A90] flex items-center px-3 py-2 rounded text-white space-x-3 font-semibold"
+              >
+                <img src="assets/call.svg" alt="cart" class="pr-3" /> Contact Us
+              </button>
+            </span>
+          </div>
+        </span>
+      </div>
+    </section>
+
+    <!-- products -->
+    <div class="container my-10 flex justify-center items-center">
+      <div class="flex flex-col items-center">
+        <h2 class="text-[#1AA84F] font-bold my-5">PRODUCTS</h2>
+        <h3 class="text-[#383B3A] text-3xl font-bold">ODORXIT PRODUCTS</h3>
+        <ul
+          class="flex laptop:flex-wrap justify-center items-center my-10 space-x-5"
+        >
+          <!-- product1 -->
           <li
-            class="flex flex-col h-[500px] w-[500px] mr-32 rounded-full pr-20 justify-center items-center border-2 border-[#1AA84F]"
+            class="flex flex-col w-[250px] space-y-3 laptop:my-5 l-tablet:w-[40%] mobile:w-[70%]"
           >
-            <div class="flex flex-col w-[90%] items-end">
-              <p class="text-[#1AA84F] font-bold text-right max-w-[90%]">
-                A REAL SOLUTION.
-              </p>
-              <h2 class="font-bold text-3xl text-right max-w-[90%]">
-                Have you Odors Solved Within 24 Hours
-              </h2>
-              <p class="text-right my-3 max-w-[90%] text-[#505854]">
-                Don't just cover up your odors, eliminate them! OdorXit provides
-                a real solution to your odor problems without using perfumes,
-                olfactory desensitizers, or masking scents.
-              </p>
-              <span class="flex items-center space-x-5 my-5 max-w-[90%]">
-                <button
-                  class="text-[#1AA84F] items-center flex px-3 py-2 rounded space-x-3 font-semibold"
-                >
-                  <img src="assets/store.svg" alt="store" class="pr-3" />
-                  Find Store
-                </button>
-                <button
-                  class="bg-[#1AA84F] flex items-center px-3 py-2 rounded text-white space-x-3 font-semibold"
-                >
-                  <img src="assets/cart.svg" alt="cart" class="pr-3" /> Buy
-                  Online
-                </button>
+            <img
+              src="assets/product Images/product-image.png"
+              alt="1"
+              class="rounded"
+            />
+            <span class="flex justify-between items-center">
+              <h4 class="font-extrabold text-app-Black">OdorXit ELIMINATOR</h4>
+              <span
+                class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
+              >
+                <img src="assets/noun-cart.svg" alt="" class="" />
               </span>
-            </div>
+            </span>
+            <p class="text-app-grey">
+              OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
+            </p>
+            <span class="flex justify-center items-center space-x-2">
+              <p class="text-app-Black font-bold">READ MORE</p>
+              <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
+            </span>
           </li>
 
+          <!-- product2 -->
           <li
-            class="flex flex-col h-[500px] w-[500px] rounded-full pl-20 justify-center items-center border-2 border-[#1AA84F]"
+            class="flex flex-col w-[250px] space-y-3 laptop:my-5 l-tablet:w-[40%] mobile:w-[70%]"
           >
-            <div class="flex flex-col w-[90%] items-start">
-              <p class="text-[#114A90] font-bold text-left max-w-[90%]">
-                A REAL SOLUTION.
-              </p>
-              <h2 class="font-bold text-3xl text-left max-w-[90%]">
-                Safe. Green. Natural.
-              </h2>
-              <p class="text- my-3 max-w-[90%] text-[#505854]">
-                OdorXit is an all natural, non-toxic odor eliminator. It is safe
-                to use on and around pets and children. OdorXit is harmless and
-                can safely be sprayed onto skin and pet fur.
-              </p>
-              <span class="flex items-center space-x-5 my-5 max-w-[90%]">
-                <button
-                  class="text-[#114A90] flex items-center px-3 py-2 rounded space-x-3 font-semibold"
-                >
-                  <img
-                    src="assets/arrow-up-right-circle.svg"
-                    alt="store"
-                    class="pr-3"
-                  />
-                  Learn More
-                </button>
-                <button
-                  class="bg-[#114A90] flex items-center px-3 py-2 rounded text-white space-x-3 font-semibold"
-                >
-                  <img src="assets/call.svg" alt="cart" class="pr-3" /> Contact
-                  Us
-                </button>
+            <img
+              src="assets/product Images/product-image-1.png"
+              alt="1"
+              class="rounded"
+            />
+            <span class="flex justify-between items-center">
+              <h4 class="font-extrabold text-app-Black">OdorXit MAGIC</h4>
+              <span
+                class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
+              >
+                <img src="assets/noun-cart.svg" alt="" class="" />
               </span>
-            </div>
+            </span>
+            <p class="text-app-grey">
+              OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
+            </p>
+            <span class="flex justify-center items-center space-x-2">
+              <p class="text-app-Black font-bold">READ MORE</p>
+              <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
+            </span>
+          </li>
+
+          <!-- product3 -->
+          <li
+            class="flex flex-col w-[250px] space-y-3 laptop:my-5 l-tablet:w-[40%] mobile:w-[70%]"
+          >
+            <img
+              src="assets/product Images/product-image-2.png"
+              alt="1"
+              class="rounded"
+            />
+            <span class="flex justify-between items-center">
+              <h4 class="font-extrabold text-app-Black">OdorXit AQM</h4>
+              <span
+                class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
+              >
+                <img src="assets/noun-cart.svg" alt="" class="" />
+              </span>
+            </span>
+            <p class="text-app-grey">
+              OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
+            </p>
+            <span class="flex justify-center items-center space-x-2">
+              <p class="text-app-Black font-bold">READ MORE</p>
+              <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
+            </span>
+          </li>
+
+          <!-- product4 -->
+          <li
+            class="flex flex-col w-[250px] space-y-3 laptop:my-5 l-tablet:w-[40%] mobile:w-[70%]"
+          >
+            <img
+              src="assets/product Images/product-image-3.png"
+              alt="1"
+              class="rounded"
+            />
+            <span class="flex justify-between items-center">
+              <h4 class="font-extrabold text-app-Black">OdorXit MOMS</h4>
+              <span
+                class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
+              >
+                <img src="assets/noun-cart.svg" alt="" class="" />
+              </span>
+            </span>
+            <p class="text-app-grey">
+              OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
+            </p>
+            <span class="flex justify-center items-center space-x-2">
+              <p class="text-app-Black font-bold">READ MORE</p>
+              <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
+            </span>
           </li>
         </ul>
       </div>
-
-      <!-- products -->
-      <div
-        class="container mx-auto px-5 my-10 flex justify-center items-center"
-      >
-        <div class="flex flex-col items-center">
-          <h3 class="text-[#1AA84F] font-bold my-5">PRODUCTS</h3>
-          <h1 class="text-[#383B3A] text-3xl font-bold">ODORXIT PRODUCTS</h1>
-          <ul class="flex justify-center items-center my-10 space-x-5">
-            <!-- product1 -->
-            <li class="flex flex-col w-[250px] space-y-3">
-              <img
-                src="assets/product Images/product-image.png"
-                alt="1"
-                class="rounded"
-              />
-              <span class="flex justify-between items-center">
-                <h4 class="font-extrabold text-app-Black">
-                  OdorXit ELIMINATOR
-                </h4>
-                <span
-                  class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
-                >
-                  <img src="assets/noun-cart.svg" alt="" class="" />
-                </span>
-              </span>
-              <p class="text-app-grey">
-                OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
-              </p>
-              <span class="flex justify-center items-center space-x-2">
-                <p class="text-app-Black font-bold">READ MORE</p>
-                <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
-              </span>
-            </li>
-
-            <!-- product2 -->
-            <li class="flex flex-col w-[250px] space-y-3">
-              <img
-                src="assets/product Images/product-image-1.png"
-                alt="1"
-                class="rounded"
-              />
-              <span class="flex justify-between items-center">
-                <h4 class="font-extrabold text-app-Black">OdorXit MAGIC</h4>
-                <span
-                  class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
-                >
-                  <img src="assets/noun-cart.svg" alt="" class="" />
-                </span>
-              </span>
-              <p class="text-app-grey">
-                OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
-              </p>
-              <span class="flex justify-center items-center space-x-2">
-                <p class="text-app-Black font-bold">READ MORE</p>
-                <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
-              </span>
-            </li>
-
-            <!-- product3 -->
-            <li class="flex flex-col w-[250px] space-y-3">
-              <img
-                src="assets/product Images/product-image-2.png"
-                alt="1"
-                class="rounded"
-              />
-              <span class="flex justify-between items-center">
-                <h4 class="font-extrabold text-app-Black">OdorXit AQM</h4>
-                <span
-                  class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
-                >
-                  <img src="assets/noun-cart.svg" alt="" class="" />
-                </span>
-              </span>
-              <p class="text-app-grey">
-                OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
-              </p>
-              <span class="flex justify-center items-center space-x-2">
-                <p class="text-app-Black font-bold">READ MORE</p>
-                <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
-              </span>
-            </li>
-
-            <!-- product4 -->
-            <li class="flex flex-col w-[250px] space-y-3">
-              <img
-                src="assets/product Images/product-image-3.png"
-                alt="1"
-                class="rounded"
-              />
-              <span class="flex justify-between items-center">
-                <h4 class="font-extrabold text-app-Black">OdorXit MOMS</h4>
-                <span
-                  class="bg-app-green rounded-full w-9 h-9 grid place-items-center"
-                >
-                  <img src="assets/noun-cart.svg" alt="" class="" />
-                </span>
-              </span>
-              <p class="text-app-grey">
-                OdorXit Odor Eliminator is a blend of non-staining, non-toxic...
-              </p>
-              <span class="flex justify-center items-center space-x-2">
-                <p class="text-app-Black font-bold">READ MORE</p>
-                <img src="assets/arrow-down-left.svg" alt="arrow" class="w-5" />
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
   </body>
 </html>
